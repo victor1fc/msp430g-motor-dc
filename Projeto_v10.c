@@ -42,13 +42,13 @@ void    config_uC (void)
     P2SEL2 = 0;
 }
 void config_Interrup(void)
-{   P1IE  |= BIT0;                          // Habilita interrupção pino 1.0 (1=habilita/0=desabilita)
+{   P1IE  |= BIT0;                          // Habilita interrupÃ§Ã£o pino 1.0 (1=habilita/0=desabilita)
     P1IES &= ~BIT0;                         // Seleciona borda de interrup pino 1.0 0=+subida 1=-descida)
-    P1IFG &= ~BIT0;                         // Limpa o flag de interrupção P1.0
+    P1IFG &= ~BIT0;                         // Limpa o flag de interrupÃ§Ã£o P1.0
 
-    P2IE  |= BIT0+BIT1+BIT2;                // Habilita interrupção pino 2.0 ao 2.2  (1=habilita/0=desabilita)
+    P2IE  |= BIT0+BIT1+BIT2;                // Habilita interrupÃ§Ã£o pino 2.0 ao 2.2  (1=habilita/0=desabilita)
     P2IES |= (BIT0+BIT1+BIT2);              // Seleciona borda de interrup pino 2.0 ao 2.2 0=+subida 1=-descida)
-    P2IFG &= ~(BIT0+BIT1+BIT2);             // Limpa o flag de interrupção P2.0 ao 2.2
+    P2IFG &= ~(BIT0+BIT1+BIT2);             // Limpa o flag de interrupÃ§Ã£o P2.0 ao 2.2
 }
 void pulso_E(void)
 {
@@ -130,11 +130,11 @@ void    config_AD(void)
 {
     ADC10CTL0 |= SREF_0;                //Ref.: VR+ = Vcc, VR- = Vss
     ADC10CTL0 |= ADC10SHT_2;            //Sample and Hold Time = 16*ADC10CLKs
-    ADC10CTL0 |= MSC;                   //Início da conversão com pulso em SHI
+    ADC10CTL0 |= MSC;                   //InÃ­cio da conversÃ£o com pulso em SHI
     ADC10CTL0 |= ADC10ON ;              //ADC on
-    ADC10CTL0 |= ADC10IE ;              //Habilita Interrupção do ADC
-    ADC10CTL1 |= INCH_5 ;               //Entrada através do Canal 5 (A5)
-    ADC10AE0  |= BIT5 ;                 //Habilita P1.5 hab. para entrada analógica
+    ADC10CTL0 |= ADC10IE ;              //Habilita InterrupÃ§Ã£o do ADC
+    ADC10CTL1 |= INCH_5 ;               //Entrada atravÃ©s do Canal 5 (A5)
+    ADC10AE0  |= BIT5 ;                 //Habilita P1.5 hab. para entrada analÃ³gica
     TA1CCR0 = 1030;
 }
 
@@ -154,9 +154,7 @@ int main(void)
       e = 355.47;
 
 /*
- * ***************************************************************************************************
  * ********************************* AREA DE INICIALIZACAO DO DISPLAY ********************************
- * ***************************************************************************************************
  */
     enviar_lcd(0, 0xC0);
     cursor = 0;
@@ -167,9 +165,7 @@ int main(void)
     }
 
 /*
-* ***************************************************************************************************
 * ********************************* INICIALIZACAO DOs TIMERS ****************************************
-* ***************************************************************************************************
 */
 
     TA0CTL |=MC_3;                                      // INICIA o timer0, modo UP/down
@@ -240,10 +236,7 @@ int main(void)
 
 
 /*
- * ***************************************************************************************************
- * ************************** SEÇAO DAS INTERRUPCOES *************************************************
- * ***************************************************************************************************
- * ***************************************************************************************************
+ * ************************** SEÃ‡AO DAS INTERRUPCOES *************************************************
  */
 //////////////// INTERRUPCAO DA PORTA 2 //////////////////////
 
@@ -311,7 +304,7 @@ __interrupt     void    interr_P2(void)
 #pragma         vector=PORT1_VECTOR
 __interrupt     void    interr_P1(void)
 {
-     contador++;                                    // Cada pulso do sensor causa uma interrupção em P1 e incrementa o contador
+     contador++;                                    // Cada pulso do sensor causa uma interrupÃ§Ã£o em P1 e incrementa o contador
      P1IFG &=~BIT0;                                 //limpa o flag de interrupcao P1.0
 }
 
