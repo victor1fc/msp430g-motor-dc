@@ -6,7 +6,7 @@ O projeto consiste em medir e controlar a rotação do motor DC. Todos os result
 1) Analogicamente, por meio de um potênciometro conectado. 
 2) Ou por meio de pré-sets de velocidades atribuidos em botões tácteis.
 ###### O código desenvolvido utiliza recursos do msp430g:
- - Timers: gerar pulsos PWM, realizar calculo de medição em RPM.
+ - Timers: gerar pulsos PWM, realizar cálculo de medição em RPM.
  - ADC: converte o sinal analógico recebido do potênciometro.
 
 ###### Componentes utilizados:
