@@ -1,4 +1,4 @@
-## Projeto - Controle de Rotação (malha aberta) de motor DC com MSP430G 
+## Projeto - Controle de Rotação (malha aberta) de motor DC com Microcontrolador MSP430G 
 
 Esse projeto foi realizado como trabalho final para disciplina de Microcontroladores e Microprocessadores.
 
