@@ -16,4 +16,6 @@ O projeto consiste em medir e controlar a rotação do motor DC. Todos os result
 - Potênciometro
 - Chaves tacteis (Push Buttons)
 
-
+  
+  
+![Projeto_Foto](https://user-images.githubusercontent.com/97235503/168105059-b1aa714f-cf34-4f9c-9cc9-06bf57b18c03.png)
