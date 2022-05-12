@@ -11,7 +11,7 @@ O projeto consiste em medir e controlar a rotação do motor DC. Todos os result
 - Display LCD 16x2
 - Sensor Óptico foto interruptor
 - Potênciometro
-- Chaves tacteis (Push Buttons)
+- Chaves tácteis (Push Buttons)
 
   
 <div align="center">
